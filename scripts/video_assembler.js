@@ -27,6 +27,11 @@ export default function assembleVideo(imagePaths, outputPath) {
         ffmpeg()
             .input(inputPattern)
             .inputOptions([`-framerate ${framerate}`])
+            .outputOptions([
+                '-c:v libx264', 
+                '-pix_fmt yuv420p', 
+                '-movflags +faststart' 
+            ])
             .output(outputPath)
             .on("end", () => {
                 console.log(`Video created successfully: ${outputPath}`);
