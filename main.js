@@ -22,18 +22,45 @@ dotenv.config();
 
     console.log("Generating prompts and images...");
 
-    const imagePaths = [];
-    for (let i = 0; i < scriptData.length; i++) {
-        const scene = scriptData[i];
+    // const imagePaths = [];
+    // for (let i = 0; i < scriptData.length; i++) {
+    //     const scene = scriptData[i];
 
-        // Generate the prompt using the scene data from JSON
-        const prompt = generatePrompt(scene);
+    //     // Generate the prompt using the scene data from JSON
+    //     const prompt = generatePrompt(scene);
         
-        // Generate the image based on the prompt
-        const imagePath = await generateImages(prompt, i);
-        imagePaths.push(imagePath);
-    }
+    //     // Generate the image based on the prompt
+    //     const imagePath = await generateImages(prompt, i);
+    //     imagePaths.push(imagePath);
+    // }
 
+    // now the image paths when the images are already generated
+    const imagePaths = [
+        "frames/frame_000.png",
+        "frames/frame_001.png",
+        "frames/frame_002.png",
+        "frames/frame_003.png",
+        "frames/frame_004.png",
+        "frames/frame_005.png",
+        "frames/frame_006.png",
+        "frames/frame_007.png",
+        "frames/frame_008.png",
+        "frames/frame_009.png",
+        "frames/frame_010.png",
+        "frames/frame_011.png",
+        "frames/frame_012.png",
+        "frames/frame_013.png",
+        "frames/frame_014.png",
+        "frames/frame_015.png",
+        "frames/frame_016.png",
+        "frames/frame_017.png",
+        "frames/frame_018.png",
+        "frames/frame_019.png",
+        "frames/frame_020.png",
+        "frames/frame_021.png",
+        "frames/frame_022.png",
+        "frames/frame_023.png"
+    ];
     console.log("Assembling video...");
     const videoPath = await assembleVideo(imagePaths, "output/video.mp4");
 

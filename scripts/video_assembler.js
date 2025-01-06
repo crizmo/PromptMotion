@@ -21,7 +21,7 @@ export default function assembleVideo(imagePaths, outputPath) {
         console.log("Input pattern:", inputPattern);
 
         const totalFrames = imagePaths.length;
-        const videoDuration = 10; // desired video duration in seconds
+        const videoDuration = 25; 
         const framerate = totalFrames / videoDuration;
 
         ffmpeg()
