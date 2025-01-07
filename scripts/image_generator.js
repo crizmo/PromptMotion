@@ -31,7 +31,7 @@ export default async function generateImages(prompt, index) {
         steps: 4,  // Steps set between 1 and 4
         n: 1,
         response_format: "b64_json",
-        seed: 500
+        seed:600
     });
 
     // Get the base64 image data

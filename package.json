@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.9",
+    "compromise": "^14.14.3",
     "dotenv": "^16.4.7",
     "ffmpeg": "^0.0.4",
     "fluent-ffmpeg": "^2.1.3",

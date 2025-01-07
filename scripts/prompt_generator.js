@@ -1,21 +1,27 @@
+import nlp from 'compromise';
+
 const characterMemory = {};
 
 export default function generatePrompt(scene) {
     const { description, action, environment } = scene;
 
+    // Use NLP to analyze the description and action
+    const doc = nlp(description + ' ' + action);
+
+    // Extract entities and key phrases
+    const characters = doc.people().out('array');
+    const places = doc.places().out('array');
+    const actions = doc.verbs().out('array');
+
     // Update character memory based on the description
-    if (description.includes("Haruto")) {
-        characterMemory["Haruto"] = "a young anime boy with short, messy dark hair and kind, gentle eyes. Haruto has a warm, caring nature, always looking out for others. His bond with the kitten, kitten, grows stronger each day as he provides it with love and care.";
-    }
-    if (description.includes("kitten")) {
-        characterMemory["kitten"] = "a tiny, black kitten with golden eyes. kitten is initially wary but quickly becomes playful and affectionate toward Haruto. Despite its small size, kitten's curiosity and energy are endless.";
-    }
-    if (description.includes("room")) {
-        characterMemory["room"] = "a cozy, inviting space with soft lighting, warm blankets, and a homely atmosphere. The scent of rain or freshly brewed tea often fills the air, adding to the tranquility of the room.";
-    } 
-    if(description.includes("home")) {
-        characterMemory["home"] = "a comfortable, welcoming place filled with memories and warmth. The walls are adorned with photos and artwork, reflecting the character's personality and interests. The home is a sanctuary, a place of peace and solace.";
-    }
+    characters.forEach(character => {
+        if (character === "Haruto") {
+            characterMemory["Haruto"] = "a young anime boy age 20 with short, messy dark hair and kind, gentle eyes. Haruto has a warm, caring nature, always looking out for others. His bond with the kitten grows stronger each day as he provides it with love and care.";
+        }
+        if (character === "kitten") {
+            characterMemory["kitten"] = "a tiny, white kitten with golden eyes.";
+        }
+    });
 
     // Ensure gradual transition and consistency in descriptions
     let characterDescription = "a generic character";
@@ -35,6 +41,6 @@ export default function generatePrompt(scene) {
         Description: ${description}
         Environment: ${sceneEnvironment}
         Characters: ${characterDescription}
-        Action: ${action ? action : 'No specific action in this scene.'}
+        Action: ${actions.join(', ') || 'No specific action in this scene.'}
     `;
 }

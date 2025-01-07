@@ -24,22 +24,22 @@ dotenv.config();
     const imagePaths = [];
     const subtitles = [];
     // 1. when we want to generate images then we will use this loop
-    // for (let i = 0; i < scriptData.length; i++) {
-    //     const scene = scriptData[i];
-
-    //     const prompt = generatePrompt(scene);
-    //     const imagePath = await generateImages(prompt, i);
-    //     imagePaths.push(imagePath);
-    //     subtitles.push(scene.subtitle);
-    // }
-
-    // 2. when the images are already generated then we will use this loop
     for (let i = 0; i < scriptData.length; i++) {
         const scene = scriptData[i];
-        const imagePath = path.resolve(`frames/frame_${i.toString().padStart(3, "0")}.png`);
+
+        const prompt = generatePrompt(scene);
+        const imagePath = await generateImages(prompt, i);
         imagePaths.push(imagePath);
         subtitles.push(scene.subtitle);
     }
+
+    // 2. when the images are already generated then we will use this loop
+    // for (let i = 0; i < scriptData.length; i++) {
+    //     const scene = scriptData[i];
+    //     const imagePath = path.resolve(`frames/frame_${i.toString().padStart(3, "0")}.png`);
+    //     imagePaths.push(imagePath);
+    //     subtitles.push(scene.subtitle);
+    // }
 
     console.log("Assembling video...");
     const backgroundMusicPath = path.resolve("music.mp3");
