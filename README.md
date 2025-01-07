@@ -1,14 +1,14 @@
 
 # PromptMotion
 
-PromptMotion is a powerful tool that generates smooth, cinematic animations based on script-based descriptions. The generated animations are composed of frames that bring your story to life, capturing emotional moments with characters and scenes. PromptMotion is perfect for creating animated videos from custom-written scripts, bringing art and stories together seamlessly.
+PromptMotion is a powerful AI-powered tool that generates multiple frames from script-based descriptions. These frames, when combined, create a story-driven animation sequence, capturing emotional moments with characters and scenes. PromptMotion is ideal for creating animated videos from custom-written scripts, bringing art and storytelling together in a unique way.
 
 ## Features
 
 - **Script-based Animation**: Provide a script describing your scenes, and PromptMotion will generate corresponding visuals for each scene.
 - **Character Memory**: Characters are recognized and remembered across scenes, ensuring consistency in visual representation.
 - **Customization**: Customize prompts and scene descriptions to tailor the animation style.
-- **Seamless Transitions**: The generated animations flow smoothly from one scene to the next, capturing the essence of cinematic storytelling.
+- **Frame-Based Storytelling**: The generated frames, when compiled together, create a seamless flow that tells your story in an animated format.
 
 ## Setup
 
