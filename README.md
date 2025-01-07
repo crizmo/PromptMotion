@@ -35,7 +35,7 @@ PromptMotion is a powerful tool that generates smooth, cinematic animations base
 
 ## Usage
 
-- Write your script in a natural, descriptive language.
+- Write your script in a natural, descriptive language. Edit the scripts/script.json file to add your script.
 - Let PromptMotion handle the rest—generating prompts, creating images, and assembling the video.
 
 ### Example Script:

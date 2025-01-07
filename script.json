@@ -1,122 +1,146 @@
 [
-  {
-      "description": "Haruto, a young anime boy with messy dark hair and kind eyes, is walking near his school on a quiet afternoon when he hears a faint meowing sound.",
-      "action": "He looks around and notices a tiny, black kitten with golden eyes hiding under a bench. Haruto’s heart softens as their eyes meet.",
-      "environment": "The scene takes place near an empty schoolyard with benches and trees. It's a peaceful afternoon with soft sunlight filtering through the leaves."
-  },
-  {
-      "description": "The kitten seems scared and weak, shivering slightly from the cold.",
-      "action": "Haruto approaches the kitten slowly, crouching down to make himself less intimidating. He reaches out his hand to gently coax the kitten toward him.",
-      "environment": "The schoolyard is still, with only the rustling of leaves in the breeze. Haruto’s gentle expression contrasts with the kitten’s cautious stance."
-  },
-  {
-      "description": "The kitten cautiously steps forward, sniffing Haruto’s hand.",
-      "action": "Haruto smiles warmly and softly speaks to the kitten, reassuring it that everything will be okay. He carefully picks it up and cradles it in his arms.",
-      "environment": "The sun is beginning to set, casting a soft orange glow over the scene. Haruto’s gentle actions are framed against the quiet schoolyard."
-  },
-  {
-      "description": "Haruto walks home with the kitten nestled in his arms, its small body warming up.",
-      "action": "He whispers comforting words to the kitten, feeling a sense of responsibility for this new life he's taken under his care.",
-      "environment": "The street is peaceful, with houses lining the sides. The sky has soft hues of dusk, and the air is calm as Haruto makes his way home."
-  },
-  {
-      "description": "At home, Haruto sets the kitten down in a safe corner of his room.",
-      "action": "He goes to the kitchen to prepare a small dish of milk for the kitten, setting it down gently in front of the little one.",
-      "environment": "The room is cozy, with soft lighting and a homely feel. The warm atmosphere contrasts with the chilly evening outside."
-  },
-  {
-      "description": "The kitten drinks the milk eagerly, its small body slightly trembling from both hunger and nervousness.",
-      "action": "Haruto watches it closely, relieved that the kitten is starting to feel more comfortable.",
-      "environment": "The room is now filled with the soft sound of rain tapping on the window, adding to the comforting atmosphere of the moment."
-  },
-  {
-      "description": "Haruto gathers some old towels and blankets to create a cozy little bed for the kitten.",
-      "action": "He arranges the blankets in the corner, ensuring the space is warm and inviting for the kitten.",
-      "environment": "The room is soft and inviting, with the soft glow of a bedside lamp. The kitten looks up at Haruto, cautiously exploring its new bed."
-  },
-  {
-      "description": "The kitten cautiously steps into the bed, sniffing around before curling up.",
-      "action": "Haruto smiles softly, feeling a warm sense of satisfaction as the kitten settles in for a nap.",
-      "environment": "The cozy room, with its soft pillows and blankets, creates a perfect setting for the kitten’s peaceful rest."
-  },
-  {
-      "description": "The next day, Haruto gets a small ball of yarn to entertain the kitten.",
-      "action": "He tosses the yarn across the room, watching with delight as the kitten pounces on it with eager curiosity.",
-      "environment": "The living room is bright and spacious, with sunlight streaming in through the windows. The kitten’s playful energy contrasts with the calm surroundings."
-  },
-  {
-      "description": "The kitten is full of energy, batting at the yarn ball with its tiny paws.",
-      "action": "Haruto laughs softly, clapping his hands as the kitten keeps chasing and rolling around with the yarn.",
-      "environment": "The room is filled with the sound of playful meows and laughter. The sunlit room gives off a warm, inviting glow."
-  },
-  {
-      "description": "As the kitten grows tired, Haruto picks it up and holds it close.",
-      "action": "He strokes the kitten’s soft fur, feeling the gentle purrs vibrating through his chest as the kitten relaxes in his arms.",
-      "environment": "The room has a peaceful ambiance, with soft music playing in the background. Haruto’s serene expression reflects the quiet moment of connection."
-  },
-  {
-      "description": "Haruto decides to build a little house for the kitten to sleep in.",
-      "action": "He arranges cardboard boxes and old towels to create a snug little shelter, making sure it's soft and safe for Kuro.",
-      "environment": "The room is filled with the faint sounds of construction, as Haruto builds the house. The kitten curiously watches him work from the comfort of its new bed."
-  },
-  {
-      "description": "The kitten explores the new house, cautiously stepping inside.",
-      "action": "Haruto watches, smiling as Kuro curls up in the cozy corner, clearly pleased with its new home.",
-      "environment": "The cozy room is now adorned with the little house Haruto made. Soft light filters through the curtains, creating a tranquil atmosphere."
-  },
-  {
-      "description": "Later that day, Haruto and the kitten are playing outside in the yard.",
-      "action": "He sets the kitten down on the grass, watching as it curiously explores its new surroundings, sniffing the flowers and chasing small insects.",
-      "environment": "The yard is sunny and vibrant, with flowers in bloom. The kitten’s small, curious movements contrast with the peaceful garden surrounding them."
-  },
-  {
-      "description": "The kitten returns the ball, looking up at Haruto with pride.",
-      "action": "Haruto cheers and pats the kitten on the head, praising its quick learning.",
-      "environment": "The grass is soft and green, with the setting sun casting a golden glow. The cheerful energy between Haruto and the kitten fills the air."
-  },
-  {
-      "description": "As evening falls, Haruto prepares to sleep, but the kitten is still full of energy.",
-      "action": "Haruto grabs a little feather toy and dangles it in front of the kitten, who swats at it playfully, jumping up and down.",
-      "environment": "The living room is dimly lit with warm, soft lighting. The sound of the kitten’s playful meows fills the room, as Haruto laughs along."
-  },
-  {
-      "description": "After a long day of play, Haruto gets into bed to rest.",
-      "action": "The kitten follows him, curling up on the blankets beside him, purring contentedly as it snuggles close.",
-      "environment": "The bedroom is peaceful, with soft blankets and pillows creating a cozy environment. The soft sound of rain outside adds to the tranquility of the moment."
-  },
-  {
-      "description": "Haruto lies down, the warmth of the kitten making him feel calm and peaceful.",
-      "action": "The kitten shifts, finding the perfect spot to sleep on Haruto’s chest, as he drifts off to sleep.",
-      "environment": "The room is dark now, with only the soft glow of the bedside lamp illuminating the peaceful scene."
-  },
-  {
-      "description": "The soft purring of the kitten lulls Haruto into a peaceful slumber.",
-      "action": "He wakes briefly, feeling the kitten's weight on his chest, and smiles before closing his eyes again.",
-      "environment": "The room is quiet, with the sound of soft purring and the rhythmic rise and fall of Haruto’s chest as they sleep together."
-  },
-  {
-      "description": "The morning sun shines through the window, waking Haruto from his sleep.",
-      "action": "He feels the kitten still resting on his chest, and gently strokes its soft fur, still half-asleep.",
-      "environment": "The room is bathed in warm morning light. The tranquility of the morning contrasts with the previous night’s peaceful slumber."
-  },
-  {
-      "description": "Haruto carefully moves to get up, not wanting to disturb the sleeping kitten.",
-      "action": "He quietly goes to make breakfast, leaving the kitten to rest peacefully in bed.",
-      "environment": "The kitchen is cozy, with soft morning light coming through the window. The peaceful atmosphere of the home contrasts with the bustling morning outside."
-  },
-  {
-      "description": "After breakfast, Haruto goes outside to run errands, leaving the kitten at home.",
-      "action": "He returns to find the kitten waiting by the door, as if it missed him, and scoops it up in his arms with a smile.",
-      "environment": "The front door is open, with sunlight streaming in. The kitten meows happily, and Haruto smiles warmly as he lifts it into his arms."
-  },
-  {
-      "description": "Haruto decides to take the kitten with him to the park to play.",
-      "action": "He sets the kitten down on the grass, watching as it curiously explores its new surroundings, sniffing the flowers and chasing small insects.",
-      "environment": "The park is peaceful, with trees and flowers lining the paths. The kitten’s playful movements contrast with the calm surroundings."
-  },
-  {
-      "description": "As the day draws to a close, Haruto and Kuro sit together on a bench in the park.",
-      "action": "Haruto gently strokes Kuro’s fur, enjoying the peaceful moment as the sun sets in the distance.",
-      "environment": "The park is bathed in golden light from the setting sun, casting long shadows on the ground. The tranquil environment adds to the calm connection between them."
-  }
+    {
+        "description": "Haruto, a young anime boy with messy dark hair and kind eyes, is walking near his school on a quiet afternoon when he hears a faint meowing sound.",
+        "action": "He looks around and notices a tiny, black kitten with golden eyes hiding under a bench. Haruto’s heart softens as their eyes meet.",
+        "environment": "The scene takes place near an empty schoolyard with benches and trees. It's a peaceful afternoon with soft sunlight filtering through the leaves.",
+        "subtitle": "Haruto hears a faint meow and spots a tiny black kitten under a bench."
+    },
+    {
+        "description": "The kitten seems scared and weak, shivering slightly from the cold.",
+        "action": "Haruto approaches the kitten slowly, crouching down to make himself less intimidating. He reaches out his hand to gently coax the kitten toward him.",
+        "environment": "The schoolyard is still, with only the rustling of leaves in the breeze. Haruto’s gentle expression contrasts with the kitten’s cautious stance.",
+        "subtitle": "Haruto gently approaches the frightened kitten, trying to gain its trust."
+    },
+    {
+        "description": "The kitten cautiously steps forward, sniffing Haruto’s hand.",
+        "action": "Haruto smiles warmly and softly speaks to the kitten, reassuring it that everything will be okay. He carefully picks it up and cradles it in his arms.",
+        "environment": "The sun is beginning to set, casting a soft orange glow over the scene. Haruto’s gentle actions are framed against the quiet schoolyard.",
+        "subtitle": "The kitten trusts Haruto and lets him pick it up gently."
+    },
+    {
+        "description": "Haruto walks home with the kitten nestled in his arms, its small body warming up.",
+        "action": "He whispers comforting words to the kitten, feeling a sense of responsibility for this new life he's taken under his care.",
+        "environment": "The street is peaceful, with houses lining the sides. The sky has soft hues of dusk, and the air is calm as Haruto makes his way home.",
+        "subtitle": "Haruto walks home, comforting the kitten as it rests in his arms."
+    },
+    {
+        "description": "At home, Haruto sets the kitten down in a safe corner of his room.",
+        "action": "He goes to the kitchen to prepare a small dish of milk for the kitten, setting it down gently in front of the little one.",
+        "environment": "The room is cozy, with soft lighting and a homely feel. The warm atmosphere contrasts with the chilly evening outside.",
+        "subtitle": "Haruto settles the kitten in a safe corner and prepares food for it."
+    },
+    {
+        "description": "The kitten drinks the milk eagerly, its small body slightly trembling from both hunger and nervousness.",
+        "action": "Haruto watches it closely, relieved that the kitten is starting to feel more comfortable.",
+        "environment": "The room is now filled with the soft sound of rain tapping on the window, adding to the comforting atmosphere of the moment.",
+        "subtitle": "The kitten drinks the milk, beginning to feel safe and comforted."
+    },
+    {
+        "description": "Haruto gathers some old towels and blankets to create a cozy little bed for the kitten.",
+        "action": "He arranges the blankets in the corner, ensuring the space is warm and inviting for the kitten.",
+        "environment": "The room is soft and inviting, with the soft glow of a bedside lamp. The kitten looks up at Haruto, cautiously exploring its new bed.",
+        "subtitle": "Haruto prepares a cozy bed for the kitten to rest in."
+    },
+    {
+        "description": "The kitten cautiously steps into the bed, sniffing around before curling up.",
+        "action": "Haruto smiles softly, feeling a warm sense of satisfaction as the kitten settles in for a nap.",
+        "environment": "The cozy room, with its soft pillows and blankets, creates a perfect setting for the kitten’s peaceful rest.",
+        "subtitle": "The kitten curls up in its new bed, feeling safe and secure."
+    },
+    {
+        "description": "The next day, Haruto gets a small ball of yarn to entertain the kitten.",
+        "action": "He tosses the yarn across the room, watching with delight as the kitten pounces on it with eager curiosity.",
+        "environment": "The living room is bright and spacious, with sunlight streaming in through the windows. The kitten’s playful energy contrasts with the calm surroundings.",
+        "subtitle": "Haruto entertains the kitten with a ball of yarn."
+    },
+    {
+        "description": "The kitten is full of energy, batting at the yarn ball with its tiny paws.",
+        "action": "Haruto laughs softly, clapping his hands as the kitten keeps chasing and rolling around with the yarn.",
+        "environment": "The room is filled with the sound of playful meows and laughter. The sunlit room gives off a warm, inviting glow.",
+        "subtitle": "The kitten plays energetically with the yarn, bringing joy to Haruto."
+    },
+    {
+        "description": "As the kitten grows tired, Haruto picks it up and holds it close.",
+        "action": "He strokes the kitten’s soft fur, feeling the gentle purrs vibrating through his chest as the kitten relaxes in his arms.",
+        "environment": "The room has a peaceful ambiance, with soft music playing in the background. Haruto’s serene expression reflects the quiet moment of connection.",
+        "subtitle": "Haruto holds the kitten close, enjoying the quiet moment together."
+    },
+    {
+        "description": "Haruto decides to build a little house for the kitten to sleep in.",
+        "action": "He arranges cardboard boxes and old towels to create a snug little shelter, making sure it's soft and safe for Kuro.",
+        "environment": "The room is filled with the faint sounds of construction, as Haruto builds the house. The kitten curiously watches him work from the comfort of its new bed.",
+        "subtitle": "Haruto builds a little house for the kitten to sleep in."
+    },
+    {
+        "description": "The kitten explores the new house, cautiously stepping inside.",
+        "action": "Haruto watches, smiling as Kuro curls up in the cozy corner, clearly pleased with its new home.",
+        "environment": "The cozy room is now adorned with the little house Haruto made. Soft light filters through the curtains, creating a tranquil atmosphere.",
+        "subtitle": "The kitten explores its new cozy house, settling in for a nap."
+    },
+    {
+        "description": "Later that day, Haruto and the kitten are playing outside in the yard.",
+        "action": "He sets the kitten down on the grass, watching as it curiously explores its new surroundings, sniffing the flowers and chasing small insects.",
+        "environment": "The yard is sunny and vibrant, with flowers in bloom. The kitten’s small, curious movements contrast with the peaceful garden surrounding them.",
+        "subtitle": "Haruto and the kitten play outside, enjoying the sunny yard."
+    },
+    {
+        "description": "The kitten returns the ball, looking up at Haruto with pride.",
+        "action": "Haruto cheers and pats the kitten on the head, praising its quick learning.",
+        "environment": "The grass is soft and green, with the setting sun casting a golden glow. The cheerful energy between Haruto and the kitten fills the air.",
+        "subtitle": "The kitten returns the ball, and Haruto praises its cleverness."
+    },
+    {
+        "description": "As evening falls, Haruto prepares to sleep, but the kitten is still full of energy.",
+        "action": "Haruto grabs a little feather toy and dangles it in front of the kitten, who swats at it playfully, jumping up and down.",
+        "environment": "The living room is dimly lit with warm, soft lighting. The sound of the kitten’s playful meows fills the room, as Haruto laughs along.",
+        "subtitle": "Haruto plays with the kitten before bed, delighting in its energy."
+    },
+    {
+        "description": "After a long day of play, Haruto gets into bed to rest.",
+        "action": "The kitten follows him, curling up on the blankets beside him, purring contentedly as it snuggles close.",
+        "environment": "The bedroom is peaceful, with soft blankets and pillows creating a cozy environment. The soft sound of rain outside adds to the tranquility of the moment.",
+        "subtitle": "Haruto and the kitten curl up together for the night."
+    },
+    {
+        "description": "Haruto lies down, the warmth of the kitten making him feel calm and peaceful.",
+        "action": "The kitten shifts, finding the perfect spot to sleep on Haruto’s chest, as he drifts off to sleep.",
+        "environment": "The room is dark now, with only the soft glow of the bedside lamp illuminating the peaceful scene.",
+        "subtitle": "The kitten settles on Haruto’s chest as he falls asleep."
+    },
+    {
+        "description": "The soft purring of the kitten lulls Haruto into a peaceful slumber.",
+        "action": "He wakes briefly, feeling the kitten's weight on his chest, and smiles before closing his eyes again.",
+        "environment": "The room is quiet, with the sound of soft purring and the rhythmic rise and fall of Haruto’s chest as they sleep together.",
+        "subtitle": "Haruto smiles, lulled by the kitten’s purring, before drifting off again."
+    },
+    {
+        "description": "The morning sun shines through the window, waking Haruto from his sleep.",
+        "action": "He feels the kitten still resting on his chest, and gently strokes its soft fur, still half-asleep.",
+        "environment": "The room is bathed in warm morning light. The tranquility of the morning contrasts with the previous night’s peaceful slumber.",
+        "subtitle": "The morning sun wakes Haruto, and he gently strokes the kitten’s fur."
+    },
+    {
+        "description": "Haruto carefully moves to get up, not wanting to disturb the sleeping kitten.",
+        "action": "He quietly goes to make breakfast, leaving the kitten to rest peacefully in bed.",
+        "environment": "The kitchen is cozy, with soft morning light coming through the window. The peaceful atmosphere of the home contrasts with the bustling morning outside.",
+        "subtitle": "Haruto quietly leaves for breakfast, careful not to disturb the kitten."
+    },
+    {
+        "description": "After breakfast, Haruto goes outside to run errands, leaving the kitten at home.",
+        "action": "He returns to find the kitten waiting by the door, as if it missed him, and scoops it up in his arms with a smile.",
+        "environment": "The front door is open, with sunlight streaming in. The kitten meows happily, and Haruto smiles warmly as he lifts it into his arms.",
+        "subtitle": "Haruto returns to find the kitten waiting for him, eager for attention."
+    },
+    {
+        "description": "Haruto decides to take the kitten with him to the park to play.",
+        "action": "He sets the kitten down on the grass, watching as it curiously explores its new surroundings, sniffing the flowers and chasing small insects.",
+        "environment": "The park is peaceful, with trees and flowers lining the paths. The kitten’s playful movements contrast with the calm surroundings.",
+        "subtitle": "Haruto takes the kitten to the park, letting it explore its new world."
+    },
+    {
+        "description": "As the day draws to a close, Haruto and Kuro sit together on a bench in the park.",
+        "action": "Haruto gently strokes Kuro’s fur, enjoying the peaceful moment as the sun sets in the distance.",
+        "environment": "The park is bathed in golden light from the setting sun, casting long shadows on the ground. The tranquil environment adds to the calm connection between them.",
+        "subtitle": "As the sun sets, Haruto and Kuro enjoy a peaceful moment together."
+    }
 ]

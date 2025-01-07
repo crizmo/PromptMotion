@@ -8,7 +8,6 @@ import assembleVideo from "./scripts/video_assembler.js";
 dotenv.config();
 
 (async () => {
-    // Correct path to the script file
     const scriptFilePath = path.resolve("script.json");
 
     let scriptData;
@@ -22,47 +21,29 @@ dotenv.config();
 
     console.log("Generating prompts and images...");
 
-    // const imagePaths = [];
+    const imagePaths = [];
+    const subtitles = [];
+    // 1. when we want to generate images then we will use this loop
     // for (let i = 0; i < scriptData.length; i++) {
     //     const scene = scriptData[i];
 
-    //     // Generate the prompt using the scene data from JSON
     //     const prompt = generatePrompt(scene);
-        
-    //     // Generate the image based on the prompt
     //     const imagePath = await generateImages(prompt, i);
     //     imagePaths.push(imagePath);
+    //     subtitles.push(scene.subtitle);
     // }
 
-    // now the image paths when the images are already generated
-    const imagePaths = [
-        "frames/frame_000.png",
-        "frames/frame_001.png",
-        "frames/frame_002.png",
-        "frames/frame_003.png",
-        "frames/frame_004.png",
-        "frames/frame_005.png",
-        "frames/frame_006.png",
-        "frames/frame_007.png",
-        "frames/frame_008.png",
-        "frames/frame_009.png",
-        "frames/frame_010.png",
-        "frames/frame_011.png",
-        "frames/frame_012.png",
-        "frames/frame_013.png",
-        "frames/frame_014.png",
-        "frames/frame_015.png",
-        "frames/frame_016.png",
-        "frames/frame_017.png",
-        "frames/frame_018.png",
-        "frames/frame_019.png",
-        "frames/frame_020.png",
-        "frames/frame_021.png",
-        "frames/frame_022.png",
-        "frames/frame_023.png"
-    ];
+    // 2. when the images are already generated then we will use this loop
+    for (let i = 0; i < scriptData.length; i++) {
+        const scene = scriptData[i];
+        const imagePath = path.resolve(`frames/frame_${i.toString().padStart(3, "0")}.png`);
+        imagePaths.push(imagePath);
+        subtitles.push(scene.subtitle);
+    }
+
     console.log("Assembling video...");
-    const videoPath = await assembleVideo(imagePaths, "output/video.mp4");
+    const backgroundMusicPath = path.resolve("music.mp3");
+    const videoPath = await assembleVideo(imagePaths, "output/video.mp4", subtitles, backgroundMusicPath);
 
     console.log("Video assembled at:", videoPath);
 })();
