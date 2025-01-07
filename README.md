@@ -1,4 +1,3 @@
-
 # PromptMotion
 
 PromptMotion is a powerful tool that generates smooth, cinematic animations based on script-based descriptions. The generated animations are composed of frames that bring your story to life, capturing emotional moments with characters and scenes. PromptMotion is perfect for creating animated videos from custom-written scripts, bringing art and stories together seamlessly.
@@ -13,41 +12,57 @@ PromptMotion is a powerful tool that generates smooth, cinematic animations base
 ## Setup
 
 1. Clone the repository:
-   ```
+   \`\`\`
    git clone https://github.com/crizmo/PromptMotion.git
    cd PromptMotion
-   ```
+   \`\`\`
 
 2. Install dependencies:
-   ```
+   \`\`\`
    npm install
-   ```
+   \`\`\`
 
-3. Create a `.env` file in the root directory and add your API keys:
-   ```
+3. Create a \`.env\` file in the root directory and add your API keys:
+   \`\`\`
    TOGETHER_API_KEY=your_api_key
-   ```
+   \`\`\`
 
 4. Run the application:
-   ```
+   \`\`\`
    node main.js
-   ```
+   \`\`\`
 
 ## Usage
 
-- Write your script in a natural, descriptive language. Edit the scripts/script.json file to add your script.
-- Let PromptMotion handle the rest—generating prompts, creating images, and assembling the video.
+1. **Write Your Script**:
+   - Write your script in a natural, descriptive language. Edit the [script.json](script.json) file to add your script.
+   - Example script:
+     \`\`\`json
+     [
+         {
+             "description": "",
+             "action": "",
+             "subtitle": ""
+         }
+     ]
+     \`\`\`
 
-### Example Script:
-```text
-The sun sets over the tranquil beach, painting the sky in hues of orange and pink. 
-A gentle breeze rustles the palm trees as the waves softly lap against the shore.
-```
+2. **Generate Prompts and Images**:
+   - The application will generate prompts based on the script and create images for each scene.
 
-## Contributing
+3. **Assemble the Video**:
+   - The generated images will be assembled into a video with optional subtitles and background music.
 
-Feel free to fork this project and make contributions! To suggest new features or report issues, please open an issue or submit a pull request.
+## Stuff Used
+
+- **compromise**: Natural language processing (NLP) library for JavaScript.
+- **Together API**: API for generating images based on text descriptions.
+- **ffmpeg**: Tool for assembling images into videos.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Feel free to fork this project and make contributions! To suggest new features or report issues, please open an issue or submit a pull request.
