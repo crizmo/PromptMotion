@@ -19,7 +19,7 @@ export default function generatePrompt(scene) {
             characterMemory["Haruto"] = "a young anime boy age 20 with short, messy dark hair and kind, gentle eyes. Haruto has a warm, caring nature, always looking out for others. His bond with the kitten grows stronger each day as he provides it with love and care.";
         }
         if (character === "kitten") {
-            characterMemory["kitten"] = "a tiny, white kitten with golden eyes.";
+            characterMemory["kitten"] = "a tiny, black kitten";
         }
     });
 

@@ -21,17 +21,16 @@ if (!fs.existsSync(framesDir)) {
 
 const together = new Together({ apiKey: process.env.TOGETHER_API_KEY });
 
-
 export default async function generateImages(prompt, index) {
     const response = await together.images.create({
         model: "black-forest-labs/FLUX.1-schnell-Free",
         prompt,
-        width: 1024,
-        height: 768,
+        width: 1008,
+        height: 1792,
         steps: 4,  // Steps set between 1 and 4
         n: 1,
         response_format: "b64_json",
-        seed:600
+        seed: 600
     });
 
     // Get the base64 image data
@@ -49,6 +48,10 @@ export default async function generateImages(prompt, index) {
     try {
         // Convert to PNG using sharp if the original is JPEG
         await sharp(buffer)
+            .resize(1080, 1920, {
+                fit: sharp.fit.cover,
+                position: sharp.strategy.entropy
+            })
             .toFormat('png')
             .toFile(outputPath);
         console.log(`Generated frame: ${outputPath}`);

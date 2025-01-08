@@ -42,8 +42,11 @@ dotenv.config();
     // }
 
     console.log("Assembling video...");
-    const backgroundMusicPath = path.resolve("music.mp3");
-    const videoPath = await assembleVideo(imagePaths, "output/video.mp4", subtitles, backgroundMusicPath);
+    // const backgroundMusicPath = path.resolve("music.mp3");
+    // const videoPath = await assembleVideo(imagePaths, "output/video.mp4", subtitles, backgroundMusicPath);
+
+    // const backgroundMusicPath = path.resolve("music.mp3");
+    const videoPath = await assembleVideo(imagePaths, "output/video.mp4", subtitles);
 
     console.log("Video assembled at:", videoPath);
 })();
