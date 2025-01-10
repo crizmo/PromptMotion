@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptMotion UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>PromptMotion</h1>
+    <div class="container">
+        <div class="editor">
+            <h2>Edit Script</h2>
+            <textarea id="scriptEditor" rows="20"></textarea>
+            <div class="style-selector">
+                <label for="styleDropdown">Select Style:</label>
+                <select id="styleDropdown">
+                    <option value="anime">Anime</option>
+                    <option value="realistic">Realistic</option>
+                    <option value="cartoon">Cartoon</option>
+                    <!-- Add more styles as needed -->
+                </select>
+            </div>
+            <button id="saveScript">Save Script</button>
+            <button id="generate">Generate</button>
+        </div>
+        <div class="output">
+            <h2>Generated Images</h2>
+            <div id="images"></div>
+            <h2>Final Video</h2>
+            <video id="videoOutput" controls></video>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

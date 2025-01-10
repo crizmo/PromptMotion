@@ -82,7 +82,7 @@ export default async function assembleVideo(imagePaths, outputPath, subtitles) {
                 }).join("\n");
 
                 fs.writeFileSync(subtitleFilePath, subtitleContent);
-                ffmpegCommand.outputOptions([`-vf subtitles=${subtitleFilePath}`]);
+                ffmpegCommand.outputOptions([`-vf subtitles=${subtitleFilePath}:force_style='FontSize=16'`]); // Adjust the font size here
             }
 
             // Combine audio into one file

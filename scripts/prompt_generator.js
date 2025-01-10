@@ -3,7 +3,8 @@ import nlp from 'compromise';
 const characterMemory = {};
 
 export default function generatePrompt(scene) {
-    const { description, action, environment } = scene;
+    const { description, action, environment, style } = scene;
+    // console.log("Generating prompt for scene:", scene);
 
     // Use NLP to analyze the description and action
     const doc = nlp(description + ' ' + action);
@@ -13,31 +14,36 @@ export default function generatePrompt(scene) {
     const places = doc.places().out('array');
     const actions = doc.verbs().out('array');
 
-    // Update character memory based on the description
+    // Extract character information from the description
     characters.forEach(character => {
-        if (character === "Haruto") {
-            characterMemory["Haruto"] = "a young anime boy age 20 with short, messy dark hair and kind, gentle eyes. Haruto has a warm, caring nature, always looking out for others. His bond with the kitten grows stronger each day as he provides it with love and care.";
-        }
-        if (character === "kitten") {
-            characterMemory["kitten"] = "a tiny, black kitten";
+        const characterInfoMatch = description.match(new RegExp(`${character}, (.*?)(?:\\.|$)`));
+        if (characterInfoMatch) {
+            characterMemory[character] = characterInfoMatch[1];
         }
     });
 
     // Ensure gradual transition and consistency in descriptions
     let characterDescription = "a generic character";
-    if (characterMemory["Haruto"]) {
-        characterDescription = characterMemory["Haruto"];
-    } else if (characterMemory["kitten"]) {
-        characterDescription = characterMemory["kitten"];
-    }
+    characters.forEach(character => {
+        if (characterMemory[character]) {
+            characterDescription = `${character}, ${characterMemory[character]}`;
+        }
+    });
 
-    // Use the environment provided in the scene or fall back to the default
-    const defaultEnvironment = "near a school on a quiet afternoon, with a soft breeze rustling the leaves. The schoolyard is almost empty, except for Haruto, who finds a small kitten hiding under a bench. Later, at home, the room is warm and cozy, filled with the scent of fresh blankets and the soft patter of rain outside.";
-    const sceneEnvironment = environment || defaultEnvironment;
+    // Generate a dynamic environment description
+    let sceneEnvironment = "a generic environment";
+    if (places.length > 0) {
+        sceneEnvironment = `a scene set in ${places.join(', ')}`;
+    } else if (environment) {
+        sceneEnvironment = environment;
+    } else {
+        sceneEnvironment = "a default environment with generic features";
+    }
 
     // Return the prompt that includes all components
     return `
         Scene:
+        Style: ${style}
         Description: ${description}
         Environment: ${sceneEnvironment}
         Characters: ${characterDescription}
