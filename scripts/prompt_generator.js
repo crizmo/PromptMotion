@@ -12,7 +12,7 @@ export default function generatePrompt(scene) {
     // Extract entities and key phrases
     const characters = doc.people().out('array');
     const places = doc.places().out('array');
-    const actions = doc.verbs().out('array');
+    // const actions = doc.verbs().out('array');
 
     // Extract character information from the description
     characters.forEach(character => {
@@ -37,16 +37,14 @@ export default function generatePrompt(scene) {
     } else if (environment) {
         sceneEnvironment = environment;
     } else {
-        sceneEnvironment = "a default environment with generic features";
+        sceneEnvironment = description;
     }
 
+    // Generate a proper English sentence
+    const prompt = `In a ${style} style, the scene is described as: ${description}. The environment is ${sceneEnvironment}. The characters involved are ${characterDescription}.`;
+
+    // console.log("Generated prompt:", prompt);
+
     // Return the prompt that includes all components
-    return `
-        Scene:
-        Style: ${style}
-        Description: ${description}
-        Environment: ${sceneEnvironment}
-        Characters: ${characterDescription}
-        Action: ${actions.join(', ') || 'No specific action in this scene.'}
-    `;
+    return prompt;
 }

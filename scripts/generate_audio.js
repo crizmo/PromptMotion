@@ -12,26 +12,22 @@ export default function generateAudio(subtitles, outputDir) {
             return;
         }
 
-        // Concatenate subtitles into larger chunks
-        const chunkSize = 3; // Adjust the chunk size as needed
-        const subtitleChunks = [];
-        for (let i = 0; i < subtitles.length; i += chunkSize) {
-            subtitleChunks.push(subtitles.slice(i, i + chunkSize).join(" "));
-        }
-
-        subtitleChunks.forEach((chunk, index) => {
-            const gttsInstance = new gtts(chunk, "en-uk");
+        subtitles.forEach((subtitle, index) => {
+            // Remove newline characters from the subtitle
+            const cleanedSubtitle = subtitle.replace(/\n/g, " ");
+            const gttsInstance = new gtts(cleanedSubtitle, "en-uk");
 
             const audioPath = path.join(outputDir, `audio_${String(index).padStart(3, "0")}.mp3`);
             audioPaths.push(audioPath);
 
             gttsInstance.save(audioPath, (err) => {
                 if (err) {
-                    console.error(`Error generating audio for chunk ${index}:`, err);
+                    console.error(`Error generating audio for subtitle ${index}:`, err);
                     reject(err);
                 } else {
+                    // console.log(`Generated audio for subtitle ${index}: ${audioPath}`);
                     completed++;
-                    if (completed === subtitleChunks.length) {
+                    if (completed === subtitles.length) {
                         resolve(audioPaths);
                     }
                 }

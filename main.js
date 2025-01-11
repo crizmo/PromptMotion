@@ -2,6 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
+import http from "http";
+import { Server } from "socket.io";
 import generatePrompt from "./scripts/prompt_generator.js";
 import generateImages from "./scripts/image_generator.js";
 import assembleVideo from "./scripts/video_assembler.js";
@@ -10,6 +12,9 @@ import generateScriptFromStory from "./scripts/story_to_script.js";
 dotenv.config();
 
 const app = express();
+const server = http.createServer(app);
+const io = new Server(server);
+
 const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
@@ -49,38 +54,83 @@ app.post("/save-script", (req, res) => {
     });
 });
 
-app.get("/generate", async (req, res) => {
-    try {
-        const storyFilePath = path.resolve("story.txt");
-        const shortStory = fs.readFileSync(storyFilePath, "utf8");
+let isGenerating = false;
+let stopRequested = false;
 
-        // Generate script.json from the short story
-        const scriptFilePath = path.resolve("script.json");
-        const scriptJson = fs.readFileSync(scriptFilePath, "utf8");
-        const scriptData = JSON.parse(scriptJson);
+io.on("connection", (socket) => {
+    console.log("A user connected");
 
-        const imagePaths = [];
-        const subtitles = [];
-        for (let i = 0; i < scriptData.length; i++) {
-            const scene = scriptData[i];
-            const prompt = generatePrompt(scene);
-            const imagePath = await generateImages(prompt, i);
-            imagePaths.push(imagePath);
-            subtitles.push(scene.subtitle);
+    socket.on("generate", async () => {
+        if (isGenerating) return;
+
+        isGenerating = true;
+        stopRequested = false;
+
+        try {
+            const storyFilePath = path.resolve("story.txt");
+            const shortStory = fs.readFileSync(storyFilePath, "utf8");
+
+            // Generate script.json from the short story
+            const scriptFilePath = path.resolve("script.json");
+            const scriptJson = fs.readFileSync(scriptFilePath, "utf8");
+            const scriptData = JSON.parse(scriptJson);
+
+            const imagePaths = [];
+            const subtitles = [];
+            for (let i = 0; i < scriptData.length; i++) {
+                if (stopRequested) break;
+
+                const scene = scriptData[i];
+                const prompt = generatePrompt(scene);
+                const imagePath = await generateImages(prompt, i);
+                imagePaths.push(imagePath);
+                subtitles.push(scene.subtitle);
+
+                // Send progress update to the client
+                socket.emit("progress", { imagePath: `/frames/${path.basename(imagePath)}`, index: i, total: scriptData.length });
+            }
+
+            if (!stopRequested) {
+                const videoPath = await assembleVideo(imagePaths, "output/video.mp4", subtitles);
+                socket.emit("complete", { video: `/output/video.mp4` });
+            } else {
+                socket.emit("stopped");
+                console.log("Generation stopped by user");
+
+                // clear the frames directory if generation was stopped
+                const framesDir = path.resolve("frames");
+                fs.readdir(framesDir, (err, files) => {
+                    if (err) {
+                        console.error("Error reading frames directory:", err);
+                    } else {
+                        for (const file of files) {
+                            fs.unlink(path.join(framesDir, file), (err) => {
+                                if (err) {
+                                    console.error("Error deleting frame:", err);
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+        } catch (error) {
+            console.error("Error generating content:", error);
+            socket.emit("error", "Error generating content.");
+        } finally {
+            isGenerating = false;
+            stopRequested = false;
         }
+    });
 
-        const videoPath = await assembleVideo(imagePaths, "output/video.mp4", subtitles);
+    socket.on("stop", () => {
+        stopRequested = true;
+    });
 
-        res.json({
-            images: imagePaths.map(imagePath => `/frames/${path.basename(imagePath)}`),
-            video: `/output/video.mp4`
-        });
-    } catch (error) {
-        console.error("Error generating content:", error);
-        res.status(500).send("Error generating content.");
-    }
+    socket.on("disconnect", () => {
+        console.log("A user disconnected");
+    });
 });
 
-app.listen(port, () => {
+server.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });

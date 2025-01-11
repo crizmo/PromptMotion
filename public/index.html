@@ -17,20 +17,38 @@
                 <select id="styleDropdown">
                     <option value="anime">Anime</option>
                     <option value="realistic">Realistic</option>
+                    <option value="black_and_white_anime">Black and White Anime</option>
+                    <option value="black_and_white_realistic">Black and White Realistic</option>
                     <option value="cartoon">Cartoon</option>
                     <!-- Add more styles as needed -->
                 </select>
             </div>
             <button id="saveScript">Save Script</button>
             <button id="generate">Generate</button>
+            <button id="stop" disabled>Stop</button>
         </div>
         <div class="output">
             <h2>Generated Images</h2>
-            <div id="images"></div>
+            <div class="carousel">
+                <div id="carouselInner" class="carousel-inner"></div>
+                <div class="carousel-controls">
+                    <button id="prevButton" class="carousel-control">&lt;</button>
+                    <button id="nextButton" class="carousel-control">&gt;</button>
+                </div>
+            </div>
             <h2>Final Video</h2>
             <video id="videoOutput" controls></video>
+            <div class="progress-bar-container">
+                <div id="progressBar" class="progress-bar"></div>
+                <div id="progressPercentage" class="progress-percentage">0%</div>
+            </div>
         </div>
     </div>
+    <div id="popup" class="popup">
+        <button id="popupClose" class="popup-close">&times;</button>
+        <img id="popupImage" src="" alt="Popup Image">
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

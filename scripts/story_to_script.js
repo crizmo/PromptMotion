@@ -15,7 +15,7 @@ export default function generateScriptFromStory(story, style) {
         const action = doc.verbs().out('text');
         const characters = doc.people().out('array');
         const places = doc.places().out('array');
-        const environment = places.length > 0 ? places.join(', ') : "Default environment description";
+        const environment = extractEnvironment(sentence, description);
 
         // Generate a more detailed description
         const detailedDescription = generateDetailedDescription(description, characters, action, environment);
@@ -36,6 +36,20 @@ export default function generateScriptFromStory(story, style) {
     const scriptFilePath = path.resolve('script.json');
     fs.writeFileSync(scriptFilePath, JSON.stringify(scenes, null, 2));
     console.log(`Script generated and saved to ${scriptFilePath}`);
+}
+
+function extractEnvironment(sentence, description) {
+    const doc = nlp(sentence);
+    const places = doc.places().out('array');
+    const environments = ["command center", "scout ship", "dead zone", "edge of the galaxy", "wreckage", "shadow of a dying star"];
+    
+    for (const env of environments) {
+        if (sentence.includes(env)) {
+            return env;
+        }
+    }
+
+    return places.length > 0 ? places.join(', ') : description;
 }
 
 function generateDetailedDescription(description, characters, action, environment) {
