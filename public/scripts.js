@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const popupClose = document.getElementById("popupClose");
     const prevButton = document.getElementById("prevButton");
     const nextButton = document.getElementById("nextButton");
+    const darkModeSwitch = document.getElementById("darkModeSwitch");
 
     const socket = io();
     let currentIndex = 0;
@@ -173,5 +174,24 @@ document.addEventListener("DOMContentLoaded", () => {
         if (event.target === popup) {
             popup.style.display = "none";
         }
+    });
+
+    // Toggle dark mode
+    darkModeSwitch.addEventListener("change", () => {
+        document.body.classList.toggle("dark-mode");
+        document.querySelector("header").classList.toggle("dark-mode");
+        document.querySelector(".editor").classList.toggle("dark-mode");
+        document.querySelector(".output").classList.toggle("dark-mode");
+        scriptEditor.classList.toggle("dark-mode");
+        styleDropdown.classList.toggle("dark-mode");
+        saveScriptButton.classList.toggle("dark-mode");
+        generateButton.classList.toggle("dark-mode");
+        stopButton.classList.toggle("dark-mode");
+        progressBar.classList.toggle("dark-mode");
+        progressPercentage.classList.toggle("dark-mode");
+        popup.classList.toggle("dark-mode");
+        popupClose.classList.toggle("dark-mode");
+        prevButton.classList.toggle("dark-mode");
+        nextButton.classList.toggle("dark-mode");
     });
 });

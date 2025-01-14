@@ -15,7 +15,7 @@ export default function generateAudio(subtitles, outputDir) {
         subtitles.forEach((subtitle, index) => {
             // Remove newline characters from the subtitle
             const cleanedSubtitle = subtitle.replace(/\n/g, " ");
-            const gttsInstance = new gtts(cleanedSubtitle, "en-uk");
+            const gttsInstance = new gtts(cleanedSubtitle, "en");
 
             const audioPath = path.join(outputDir, `audio_${String(index).padStart(3, "0")}.mp3`);
             audioPaths.push(audioPath);
