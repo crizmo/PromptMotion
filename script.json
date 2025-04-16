@@ -1,51 +1,44 @@
 [
   {
-    "description": "Alice, a curious girl with blonde hair and a blue dress, fell down a rabbit hole into a strange world. The characters involved are: Alice,. The main actions are: fell down. The scene takes place in: Alice, a curious girl with blonde hair and a blue dress, fell down a rabbit hole into a strange world..",
-    "action": "fell down",
-    "environment": "Alice, a curious girl with blonde hair and a blue dress, fell down a rabbit hole into a strange world.",
-    "style": "realistic",
-    "subtitle": "Alice, a curious girl with blonde hair and a blue\ndress, fell down a rabbit hole into a strange\nworld."
+    "description": "Page 1: Moonlit Forest Temple The scene takes place in: Moonlit Forest Temple.",
+    "action": "",
+    "environment": "Moonlit Forest Temple",
+    "style": "anime",
+    "subtitle": "Page 1: Moonlit Forest Temple"
   },
   {
-    "description": "She met a white rabbit in a hurry, dressed in a waistcoat and holding a pocket watch, who led her through this bizarre land. The main actions are: met dressed holding led. The scene takes place in: She met a white rabbit in a hurry, dressed in a waistcoat and holding a pocket watch, who led her through this bizarre land..",
-    "action": "met dressed holding led",
-    "environment": "She met a white rabbit in a hurry, dressed in a waistcoat and holding a pocket watch, who led her through this bizarre land.",
-    "style": "realistic",
-    "subtitle": "She met a white rabbit in a hurry, dressed in a\nwaistcoat and holding a pocket watch, who led her\nthrough this bizarre land."
+    "description": "Panel 1: Liora, a young woman with flowing silver hair down to her waist, emerald green eyes, and wearing a midnight blue cloak adorned with silver embroidery, stands before an ancient stone temple covered in glowing blue runes. The characters involved are: emerald. The main actions are: wearing adorned covered glowing runes. The scene takes place in: Panel 1: Liora, a young woman with flowing silver hair down to her waist, emerald green eyes, and wearing a midnight blue cloak adorned with silver embroidery, stands before an ancient stone temple covered in glowing blue runes..",
+    "action": "wearing adorned covered glowing runes",
+    "environment": "Panel 1: Liora, a young woman with flowing silver hair down to her waist, emerald green eyes, and wearing a midnight blue cloak adorned with silver embroidery, stands before an ancient stone temple covered in glowing blue runes.",
+    "style": "anime",
+    "subtitle": "Panel 1: Liora, a young woman with flowing silver\nhair down to her waist, emerald green eyes, and\nwearing a midnight blue cloak adorned with silver\nembroidery, stands before an ancient stone temple\ncovered in glowing blue runes."
   },
   {
-    "description": "As she wandered, Alice encountered the Cheshire Cat, with a mischievous grin and a floating, striped tail, who gave her cryptic advice. The characters involved are: Alice. The main actions are: wandered, encountered gave. The scene takes place in: As she wandered, Alice encountered the Cheshire Cat, with a mischievous grin and a floating, striped tail, who gave her cryptic advice..",
-    "action": "wandered, encountered gave",
-    "environment": "As she wandered, Alice encountered the Cheshire Cat, with a mischievous grin and a floating, striped tail, who gave her cryptic advice.",
-    "style": "realistic",
-    "subtitle": "As she wandered, Alice encountered the Cheshire\nCat, with a mischievous grin and a floating,\nstriped tail, who gave her cryptic advice."
+    "description": "\"The Starfall Temple, just as grandfather's map indicated.\" The main actions are: indicated. The scene takes place in: \"The Starfall Temple, just as grandfather's map indicated.\".",
+    "action": "indicated",
+    "environment": "\"The Starfall Temple, just as grandfather's map indicated.\"",
+    "style": "anime",
+    "subtitle": "\"The Starfall Temple, just as grandfather's map\nindicated.\""
   },
   {
-    "description": "She then came across the Queen of Hearts, a regal but short-tempered woman with a crown and red attire, always shouting, \"Off with their heads!\" The main actions are: came always shouting. The scene takes place in: She then came across the Queen of Hearts, a regal but short-tempered woman with a crown and red attire, always shouting, \"Off with their heads!\".",
-    "action": "came always shouting",
-    "environment": "She then came across the Queen of Hearts, a regal but short-tempered woman with a crown and red attire, always shouting, \"Off with their heads!\"",
-    "style": "realistic",
-    "subtitle": "She then came across the Queen of Hearts, a regal\nbut short-tempered woman with a crown and red\nattire, always shouting, \"Off with their heads!\""
+    "description": "Panel 2: Close-up of Liora's determined face illuminated by the blue glow of the temple runes, her emerald eyes reflecting the magical light, silver locks framing her delicate features. The characters involved are: emerald. The main actions are: up  determined illuminated runes, eyes reflecting framing. The scene takes place in: Panel 2: Close-up of Liora's determined face illuminated by the blue glow of the temple runes, her emerald eyes reflecting the magical light, silver locks framing her delicate features..",
+    "action": "up  determined illuminated runes, eyes reflecting framing",
+    "environment": "Panel 2: Close-up of Liora's determined face illuminated by the blue glow of the temple runes, her emerald eyes reflecting the magical light, silver locks framing her delicate features.",
+    "style": "anime",
+    "subtitle": "Panel 2: Close-up of Liora's determined face\nilluminated by the blue glow of the temple runes,\nher emerald eyes reflecting the magical light,\nsilver locks framing her delicate features."
   },
   {
-    "description": "In her travels, Alice also met the Mad Hatter, with wild, frizzy hair and a top hat, who hosted a nonsensical tea party with the March Hare. The characters involved are: Alice. The main actions are: also met hosted. The scene takes place in: In her travels, Alice also met the Mad Hatter, with wild, frizzy hair and a top hat, who hosted a nonsensical tea party with the March Hare..",
-    "action": "also met hosted",
-    "environment": "In her travels, Alice also met the Mad Hatter, with wild, frizzy hair and a top hat, who hosted a nonsensical tea party with the March Hare.",
-    "style": "realistic",
-    "subtitle": "In her travels, Alice also met the Mad Hatter,\nwith wild, frizzy hair and a top hat, who hosted\na nonsensical tea party with the March Hare."
+    "description": "\"The celestial alignment happens only once every century.\" The main actions are: happens only once. The scene takes place in: \"The celestial alignment happens only once every century.\".",
+    "action": "happens only once",
+    "environment": "\"The celestial alignment happens only once every century.\"",
+    "style": "anime",
+    "subtitle": "\"The celestial alignment happens only once every\ncentury.\""
   },
   {
-    "description": "Through strange conversations and impossible puzzles, Alice began to question reality itself. The characters involved are: Alice. The main actions are: began question. The scene takes place in: Through strange conversations and impossible puzzles, Alice began to question reality itself..",
-    "action": "began question",
-    "environment": "Through strange conversations and impossible puzzles, Alice began to question reality itself.",
-    "style": "realistic",
-    "subtitle": "Through strange conversations and impossible\npuzzles, Alice began to question reality itself."
-  },
-  {
-    "description": "In the end, after a chaotic trial with the Queen, Alice woke up in her world, realizing it had all been a strange dream. The characters involved are: Alice. The main actions are: woke up realizing had all been. The scene takes place in: In the end, after a chaotic trial with the Queen, Alice woke up in her world, realizing it had all been a strange dream..",
-    "action": "woke up realizing had all been",
-    "environment": "In the end, after a chaotic trial with the Queen, Alice woke up in her world, realizing it had all been a strange dream.",
-    "style": "realistic",
-    "subtitle": "In the end, after a chaotic trial with the Queen,\nAlice woke up in her world, realizing it had all\nbeen a strange dream."
+    "description": "Panel 3: Wide shot of the forest surrounding the temple, massive ancient trees with twisted trunks reaching toward the starry night sky, their leaves shimmering with bioluminescent blue spores, stone pathways half-covered in moss leading to the temple entrance. The characters involved are: moss. The main actions are: shot surrounding reaching shimmering covered leading. The scene takes place in: Panel 3: Wide shot of the forest surrounding the temple, massive ancient trees with twisted trunks reaching toward the starry night sky, their leaves shimmering with bioluminescent blue spores, stone pathways half-covered in moss leading to the temple entrance..",
+    "action": "shot surrounding reaching shimmering covered leading",
+    "environment": "Panel 3: Wide shot of the forest surrounding the temple, massive ancient trees with twisted trunks reaching toward the starry night sky, their leaves shimmering with bioluminescent blue spores, stone pathways half-covered in moss leading to the temple entrance.",
+    "style": "anime",
+    "subtitle": "Panel 3: Wide shot of the forest surrounding the\ntemple, massive ancient trees with twisted trunks\nreaching toward the starry night sky, their\nleaves shimmering with bioluminescent blue\nspores, stone pathways half-covered in moss\nleading to the temple entrance."
   }
 ]

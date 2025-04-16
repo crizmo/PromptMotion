@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const socket = io();
     let currentIndex = 0;
     let isGenerating = false;
+    let generatedImages = []; // Store references to all generated images
 
     // Load the script from the server
     fetch("/story.txt")
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isGenerating) return;
 
         isGenerating = true;
+        generatedImages = []; // Reset generated images array
         stopButton.disabled = false;
         generateButton.disabled = true;
         carouselInner.innerHTML = ""; // Clear previous images
@@ -74,30 +76,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
         socket.on("progress", (data) => {
             if (data.imagePath) {
-                // Display generated images progressively
-                const img = document.createElement("img");
-                img.src = data.imagePath;
-                img.addEventListener("click", () => {
-                    popupImage.src = data.imagePath;
-                    popup.style.display = "block";
-                });
-
-                const carouselItem = document.createElement("div");
-                carouselItem.className = "carousel-item";
-                carouselItem.appendChild(img);
-
-                // Replace the first placeholder box with the generated image
-                const placeholderBox = carouselInner.querySelector(".placeholder-box");
-                if (placeholderBox) {
-                    carouselInner.replaceChild(carouselItem, placeholderBox);
-                } else {
-                    carouselInner.appendChild(carouselItem);
-                }
-
+                // Store image reference
+                generatedImages.push(data.imagePath);
+                
+                // Only render images near the current view
+                updateCarouselImages();
+                
                 // Update progress bar and percentage text
                 const progress = ((data.index + 1) / data.total) * 100;
                 progressBar.style.width = `${progress}%`;
                 progressPercentage.textContent = `${Math.round(progress)}%`;
+                
+                // If this was an error frame, show a warning indicator
+                if (data.error) {
+                    const errorNotice = document.createElement("div");
+                    errorNotice.className = "error-notice";
+                    errorNotice.textContent = "Frame retried due to content filter";
+                    document.querySelector(".progress-bar-container").appendChild(errorNotice);
+                    
+                    // Remove the notice after 3 seconds
+                    setTimeout(() => {
+                        if (errorNotice.parentNode) {
+                            errorNotice.parentNode.removeChild(errorNotice);
+                        }
+                    }, 3000);
+                }
             }
         });
 
@@ -123,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
             carouselInner.innerHTML = "";
             progressBar.style.width = "0%";
             progressPercentage.textContent = "0%";
-            
+            generatedImages = [];
         });
 
         socket.on("error", (message) => {
@@ -153,15 +156,67 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     nextButton.addEventListener("click", () => {
-        if (currentIndex < Math.ceil(carouselInner.children.length / 4) - 1) {
+        const maxPages = Math.ceil(generatedImages.length / 4);
+        if (currentIndex < maxPages - 1) {
             currentIndex++;
             updateCarousel();
         }
     });
 
+    // Update carousel position without reloading all images
     function updateCarousel() {
+        updateCarouselImages();
         const offset = -currentIndex * 100;
         carouselInner.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Efficiently load only images that are currently visible or nearby
+    function updateCarouselImages() {
+        // Clear current carousel
+        carouselInner.innerHTML = "";
+        
+        // Calculate which images should be visible
+        const startIdx = Math.max(0, currentIndex * 4 - 4); // Include previous page
+        const endIdx = Math.min(generatedImages.length, (currentIndex + 2) * 4); // Include next page
+        
+        // Create placeholders for all images
+        for (let i = 0; i < generatedImages.length; i++) {
+            const carouselItem = document.createElement("div");
+            carouselItem.className = "carousel-item";
+            
+            // Only load images that are in view or nearby
+            if (i >= startIdx && i < endIdx) {
+                const img = document.createElement("img");
+                img.src = generatedImages[i];
+                img.loading = "lazy"; // Use browser's lazy loading
+                img.addEventListener("click", () => {
+                    popupImage.src = generatedImages[i];
+                    popup.style.display = "block";
+                });
+                carouselItem.appendChild(img);
+            } else {
+                // Use placeholder for images that are far from current view
+                carouselItem.classList.add("placeholder-box");
+                carouselItem.textContent = `Frame ${i+1}`;
+                carouselItem.dataset.imageIndex = i; // Store index for later loading
+            }
+            
+            carouselInner.appendChild(carouselItem);
+        }
+        
+        // Add placeholder boxes if there are no images yet
+        if (generatedImages.length === 0) {
+            for (let i = 0; i < 4; i++) {
+                const placeholderBox = document.createElement("div");
+                placeholderBox.className = "carousel-item placeholder-box";
+                placeholderBox.textContent = "Generating...";
+                carouselInner.appendChild(placeholderBox);
+            }
+        }
+        
+        // Update carousel buttons state
+        prevButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex >= Math.ceil(generatedImages.length / 4) - 1;
     }
 
     // Close the popup when the close button is clicked
